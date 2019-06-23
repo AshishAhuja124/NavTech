@@ -1,0 +1,48 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Order detail Form : You can see the detail information of an orders.</div>
+  <div class="panel-body">
+    <form class="form-horizontal" *ngIf=order>
+      <div class="form-group">
+        <label for="orderNumber" class="col-sm-2 control-label">orderNumber : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{order.orderNumber}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="orderdueDate" class="col-sm-2 control-label">orderdueDate : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{order.orderdueDate}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="custName" class="col-sm-2 control-label">custName : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{order.custName}}</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="custPhone" class="col-sm-2 control-label">custPhone : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{order.custPhone}}</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="custAddress" class="col-sm-2 control-label">custAddress : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{order.custAddress}}</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="orderTotal" class="col-sm-2 control-label">orderTotal : </label>
+        <div class="col-sm-9">
+          <p class="form-control">{{order.orderTotal}}</p>
+        </div>
+      </div>
+
+
+    </form>
+
+  </div>
+</div>

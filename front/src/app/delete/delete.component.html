@@ -1,0 +1,45 @@
+<div class="jumbotron">
+  <div align='center'>
+    <h1>
+      Welcome To Navtech
+    </h1>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="md-form active-pink active-pink-2 mb-3 mt-0">
+    <input class="form-control" name="search" [(ngModel)]="search" type="text" placeholder="Search Order"
+      aria-label="Search">
+  </div>
+
+  <table class="table rounded-lg z-depth-1-half table-hover">
+    <thead>
+      <tr>
+        <td>Order Number</td>
+        <td>Order Due Date</td>
+        <td>Customer Name</td>
+        <td>Customer Phone</td>
+        <td>Customer Address</td>
+        <td>Order Total</td>
+
+        <td width="275" align="center">Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let movie of model'>
+        <td>{{movie.orderNumber}}</td>
+        <td>{{movie.orderdueDate}}</td>
+
+        <td>{{movie.custName}}</td>
+        <td>{{movie.custPhone}}</td>
+        <td>{{movie.custAddress}}</td>
+        <td>{{movie.orderTotal}}</td>
+
+        <td width="275">
+          <a class="btn btn-danger" (click)="deleteOrder(movie._id)">Delete</a>
+          <a class="btn btn-success" routerLink="/update/{{movie._id}}">Update</a>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
